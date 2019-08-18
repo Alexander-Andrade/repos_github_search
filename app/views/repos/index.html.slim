@@ -1,0 +1,10 @@
+.container
+  .row.mt-5
+    .col-md-9.mx-auto
+      = form_for :repo_query, url: 'repos/search', remote: true, html: {id: 'repo_serach_form'} do |f|
+        .form-group
+          = f.text_field :q, class: 'form-control', id: "repos_search"
+
+  .row.mt-5
+    .col-md-9.mx-auto
+      .list-group.repos

@@ -1,0 +1,6 @@
+- if link.present?
+  li.page-item
+    = form_for :repo_query, url: 'repos/paginate', remote: true do |f|
+        .form-group
+          = f.hidden_field :url, value: link
+          = f.submit link_text, class: 'page-link'

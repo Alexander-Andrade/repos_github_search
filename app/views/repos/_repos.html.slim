@@ -1,0 +1,5 @@
+- repos && repos.each do |repo|
+    a.list-group-item.list-group-item-action href=repo["html_url"]
+      = repo["full_name"]
+
+= render partial:'repos/pagination', locals:{ links: links }

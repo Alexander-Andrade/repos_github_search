@@ -1,0 +1,6 @@
+- if links.present?
+  ul.pagination.mt-3.mx-auto
+    = render partial: 'repos/pagination_button', locals:{ link: links[:first], link_text: 'First' }
+    = render partial: 'repos/pagination_button', locals:{ link: links[:prev], link_text: 'Previous' }
+    = render partial: 'repos/pagination_button', locals:{ link: links[:next], link_text: 'Next' }
+    = render partial: 'repos/pagination_button', locals:{ link: links[:last], link_text: 'Last' }
